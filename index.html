@@ -35,6 +35,92 @@
       </div>
     </div>
 	
+	<!-- MAIN GAME CONTENT -->
+	
+	<!-- PICKER BUTTONS -->
+	<div id="js-playerPickElement" class="container">
+  <div class="row d-flex justify-content-center">
+    <button id="js-playerPick_rock" class="btn btn-secondary">
+      <span class="badge">
+        <i class="fa fa-hand-rock-o" aria-hidden="true"></i>
+      </span>
+      Rock
+    </button>
+    <button id="js-playerPick_paper"  class="btn btn-light">
+      <span class="badge">
+      <i class="fa fa-hand-paper-o" aria-hidden="true"></i>
+      </span>
+      Paper
+    </button>
+    <button id="js-playerPick_scissors"  class="btn btn-danger">
+      <span class="badge">
+      <i class="fa fa-hand-scissors-o" aria-hidden="true"></i>
+      </span>
+      Scissors
+    </button>
+	<button id="js-playerPick_lizard"  class="btn btn-success">
+      <span class="badge">
+      <i class="fa fa-hand-lizard-o" aria-hidden="true"></i>
+      </span>
+      Lizard
+    </button>
+	<button id="js-playerPick_spock"  class="btn btn-primary">
+      <span class="badge">
+      <i class="fa fa-hand-spock-o" aria-hidden="true"></i>
+      </span>
+      Spock
+    </button>
+  </div>
+</div>
+
+<!-- STATISTIC TABLE -->
+<div id="js-resultsTableElement" class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-sm-5 d-flex justify-content-center align-items-center">
+      <span id="js-playerPoints" class="badge badge-secondary">
+      0
+      </span>
+      <span id="js-playerName">
+      Player Name
+      </span>
+    </div>
+    <div class="col-sm-2 d-flex justify-content-center align-items-center">
+      VS.
+    </div>
+    <div class="col-sm-5 d-flex justify-content-center align-items-center">
+      <span id="js-computerPoints" class="badge badge-secondary">
+      0
+      </span>
+      Computer
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div class="col-sm-5 d-flex justify-content-center align-items-center">
+      <span id="js-playerPick">
+        Player selection
+      </span>
+    </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-5 d-flex justify-content-center align-items-center">
+      <span id="js-computerPick">
+        Computer selection
+      </span>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div class="col-sm-5 d-flex justify-content-center align-items-center">
+      <span id="js-playerResult">
+        Player Score
+      </span>
+    </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-5 d-flex justify-content-center align-items-center">
+      <span id="js-computerResult">
+        Computer Score
+      </span>
+    </div>
+  </div>
+</div>
 	<!-- MODAL DISPLAY -->
 	<div class="modal fade" id="rules" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
 	  <div class="modal-dialog" role="document">
@@ -55,7 +141,8 @@
 			Lizard eats Paper<br>
 			Paper disproves Spock<br>
 			Spock vaporizes Rock<br>
-			(and as it always has) Rock crushes Scissors</p><br>
+			(and as it always has) Rock crushes Scissors</p>
+			<p>First, who gets 10 points - wins!</p>
 		  </div>
 		  <div class="modal-footer">
 			<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
