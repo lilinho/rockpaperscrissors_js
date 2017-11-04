@@ -10,10 +10,17 @@
   #js-playerPickElement .btn {
     margin: 5px; }
 
+.state {
+  margin: 20px 0; }
+
 #js-resultsTableElement {
   padding: 15px 0; }
 
 .c-btns {
   display: none; }
+
+#js-resultsTableElement .badge {
+  display: block;
+  font-size: 30px; }
 
 /*# sourceMappingURL=style.css.map */

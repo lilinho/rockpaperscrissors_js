@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="utf-8">
-    <title>Page title</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>Rock Paper Scissors Lizard Spock</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
   <!-- HEADER -->
-    <div class="container">
-      <div class="card bg-light mb-3">
-        <div class="card-header">
-		  <h4 class="card-title">
-		    Rock Paper Scissors Lizard Spock
-	      </h4>
-		</div>
-          <div class="card-body">
-            <p class="card-text">Let's have some fun!</p>
-			<p>
-			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#rules"> <!-- MODAL BUTTON -->
-                Rules
-              </button>
-			</p>
-          </div>
+  <div class="container">
+    <div class="card bg-light mb-3">
+      <div class="card-header">
+        <h4 class="card-title">
+          Rock Paper Scissors Lizard Spock
+        </h4>
       </div>
-    </div>
-	<!-- NEW GAME BUTTON -->
-	<div id="js-newGameElement" class="container">
-      <div class="row text-center d-flex justify-content-center">
-        <button  id="js-newGameButton" class="btn btn-success">
-          New game
+      <div class="card-body">
+        <p class="card-text">Let's have some fun!</p>
+        <p>
+         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#rules"> <!-- MODAL BUTTON -->
+          Rules
         </button>
-      </div>
+      </p>
     </div>
-	
-	<!-- MAIN GAME CONTENT -->
-	
-	<!-- PICKER BUTTONS -->
-	<div id="js-playerPickElement" class="container">
+  </div>
+</div>
+<!-- NEW GAME BUTTON -->
+<div id="js-newGameElement" class="container">
+  <div class="row text-center d-flex justify-content-center">
+    <button  id="js-newGameButton" class="btn btn-success">
+      New game
+    </button>
+  </div>
+</div>
+
+<!-- MAIN GAME CONTENT -->
+
+<!-- PICKER BUTTONS -->
+<div id="js-playerPickElement" class="container">
   <div class="row d-flex justify-content-center">
     <button id="js-playerPick_rock" class="btn btn-secondary">
       <span class="badge">
@@ -48,36 +48,36 @@
     </button>
     <button id="js-playerPick_paper"  class="btn btn-light">
       <span class="badge">
-      <i class="fa fa-hand-paper-o" aria-hidden="true"></i>
+        <i class="fa fa-hand-paper-o" aria-hidden="true"></i>
       </span>
       Paper
     </button>
     <button id="js-playerPick_scissors"  class="btn btn-danger">
       <span class="badge">
-      <i class="fa fa-hand-scissors-o" aria-hidden="true"></i>
+        <i class="fa fa-hand-scissors-o" aria-hidden="true"></i>
       </span>
       Scissors
     </button>
-	<button id="js-playerPick_lizard"  class="btn btn-success">
+    <button id="js-playerPick_lizard"  class="btn btn-success">
       <span class="badge">
-      <i class="fa fa-hand-lizard-o" aria-hidden="true"></i>
+        <i class="fa fa-hand-lizard-o" aria-hidden="true"></i>
       </span>
       Lizard
     </button>
-	<button id="js-playerPick_spock"  class="btn btn-primary">
+    <button id="js-playerPick_spock"  class="btn btn-primary">
       <span class="badge">
-      <i class="fa fa-hand-spock-o" aria-hidden="true"></i>
+        <i class="fa fa-hand-spock-o" aria-hidden="true"></i>
       </span>
       Spock
     </button>
   </div>
-<!-- BUTTONS FOR ANIMATION -->
-<div class="row">
-<div class="col-sm-5"></div>
-<div class="col-sm-2 d-flex justify-content-center">
-<h4 class="card-title">VS</h4>
-</div>
-</div>
+  <!-- BUTTONS FOR ANIMATION -->
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4 d-flex justify-content-center">
+      <h4 id="js-displayState" class="card-title state"></h4>
+    </div>
+  </div>
   <div class="row d-flex justify-content-center computer-animation">
     <button class="btn btn-secondary c-btns">
       <span class="badge">
@@ -87,25 +87,25 @@
     </button>
     <button class="btn btn-light c-btns">
       <span class="badge">
-      <i class="fa fa-hand-paper-o" aria-hidden="true"></i>
+        <i class="fa fa-hand-paper-o" aria-hidden="true"></i>
       </span>
       Paper
     </button>
     <button  class="btn btn-danger c-btns">
       <span class="badge">
-      <i class="fa fa-hand-scissors-o" aria-hidden="true"></i>
+        <i class="fa fa-hand-scissors-o" aria-hidden="true"></i>
       </span>
       Scissors
     </button>
-	<button  class="btn btn-success c-btns">
+    <button  class="btn btn-success c-btns">
       <span class="badge">
-      <i class="fa fa-hand-lizard-o" aria-hidden="true"></i>
+        <i class="fa fa-hand-lizard-o" aria-hidden="true"></i>
       </span>
       Lizard
     </button>
-	<button  class="btn btn-primary c-btns">
+    <button  class="btn btn-primary c-btns">
       <span class="badge">
-      <i class="fa fa-hand-spock-o" aria-hidden="true"></i>
+        <i class="fa fa-hand-spock-o" aria-hidden="true"></i>
       </span>
       Spock
     </button>
@@ -116,10 +116,7 @@
   <div class="row d-flex justify-content-center">
     <div class="col-sm-5 d-flex justify-content-center align-items-center">
       <span id="js-playerPoints" class="badge badge-secondary">
-      0
-      </span>
-      <span id="js-playerName">
-      Player Name
+        0
       </span>
     </div>
     <div class="col-sm-2 d-flex justify-content-center align-items-center">
@@ -127,9 +124,21 @@
     </div>
     <div class="col-sm-5 d-flex justify-content-center align-items-center">
       <span id="js-computerPoints" class="badge badge-secondary">
-      0
+        0
       </span>
-      Computer
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div class="col-sm-5 d-flex justify-content-center align-items-center">
+      <span id="js-playerName">
+        Player Name
+      </span>
+    </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-5 d-flex justify-content-center align-items-center">
+      <span>
+        Computer
+      </span>
     </div>
   </div>
   <div class="row d-flex justify-content-center">
@@ -145,53 +154,52 @@
       </span>
     </div>
   </div>
-  <div class="row d-flex justify-content-center">
-    <div class="col-sm-5 d-flex justify-content-center align-items-center">
-      <span id="js-playerResult">
-        Player Score
-      </span>
-    </div>
-    <div class="col-sm-2"></div>
-    <div class="col-sm-5 d-flex justify-content-center align-items-center">
-      <span id="js-computerResult">
-        Computer Score
-      </span>
-    </div>
-  </div>
 </div>
-	<!-- MODAL DISPLAY -->
-	<div class="modal fade" id="rules" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-	  <div class="modal-dialog" role="document">
-		<div class="modal-content">
-		  <div class="modal-header">
-			<h5 class="modal-title" id="exampleModalLongTitle">Rules of Rock Paper Scissors Spock Lizard</h5>
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			  <span aria-hidden="true">&times;</span>
-			</button>
-		  </div>
-		  <div class="modal-body">
-			<p>Scissors cuts Paper<br>
-			Paper covers Rock<br>
-			Rock crushes Lizard<br>
-			Lizard poisons Spock<br>
-			Spock smashes Scissors<br>
-			Scissors decapitates Lizard<br>
-			Lizard eats Paper<br>
-			Paper disproves Spock<br>
-			Spock vaporizes Rock<br>
-			(and as it always has) Rock crushes Scissors</p>
-			<p>First, who gets 10 points - wins!</p>
-		  </div>
-		  <div class="modal-footer">
-			<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-		  </div>
-		</div>
-	  </div>
-	</div>
-   <!-- JAVASCRIPT -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/scripts.js"></script>
-  </body>
+<!-- FINISHED GAME -->
+<div id="js-finishedGameElement" class="container">
+  <div class="row text-center d-flex justify-content-center">
+   <div id="js-resultOfGame" class="card-title">
+   </div>
+ </div>
+ <div class="row text-center d-flex justify-content-center">
+  <button  id="js-playAgainButton" class="btn btn-success">
+    Play Again
+  </button>
+</div>
+</div>
+<!-- MODAL DISPLAY -->
+<div class="modal fade" id="rules" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+ <div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+     <h5 class="modal-title" id="exampleModalLongTitle">Rules of Rock Paper Scissors Spock Lizard</h5>
+     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+       <span aria-hidden="true">&times;</span>
+     </button>
+   </div>
+   <div class="modal-body">
+     <p>Scissors cuts Paper<br>
+       Paper covers Rock<br>
+       Rock crushes Lizard<br>
+       Lizard poisons Spock<br>
+       Spock smashes Scissors<br>
+       Scissors decapitates Lizard<br>
+       Lizard eats Paper<br>
+       Paper disproves Spock<br>
+       Spock vaporizes Rock<br>
+     (and as it always has) Rock crushes Scissors</p>
+     <p>First who gets 10 points - wins!</p>
+   </div>
+   <div class="modal-footer">
+     <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+   </div>
+ </div>
+</div>
+</div>
+<!-- JAVASCRIPT -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+</body>
 </html>
