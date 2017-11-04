@@ -1,5 +1,15 @@
 var gameStatus = "notStarted";
 
+// handlers for divs in app
+var gamePicker = document.getElementById("js-playerPickElement");
+var gameStats = document.getElementById("js-resultsTableElement");
+var gameResultsScreen = document.getElementById("js-finishedGameElement");
+var gameResults = document.getElementById("js-resultOfGame");
+var displayStateElem = document.getElementById("js-displayState");
+var playerPointsElem = document.getElementById("js-playerPoints");
+var computerPointsElem = document.getElementById("js-computerPoints");
+var playerNameElem = document.getElementById("js-playerName");
+
 // handlers for buttons in app
 var newGame = document.getElementById("js-newGameElement");
 var playAgainButton = document.getElementById("js-playAgainButton");
@@ -11,16 +21,6 @@ var picksSpock = document.getElementById("js-playerPick_spock");
 
 var computerButtons = document.getElementsByClassName("c-btns");
 var playerButtons = gamePicker.getElementsByTagName("button");
-
-// handlers for divs in app
-var gamePicker = document.getElementById("js-playerPickElement");
-var gameStats = document.getElementById("js-resultsTableElement");
-var gameResultsScreen = document.getElementById("js-finishedGameElement");
-var gameResults = document.getElementById("js-resultOfGame");
-var displayStateElem = document.getElementById("js-displayState");
-var playerPointsElem = document.getElementById("js-playerPoints");
-var computerPointsElem = document.getElementById("js-computerPoints");
-var playerNameElem = document.getElementById("js-playerName");
 	
 var previousIndex = 0;
 var interval;
