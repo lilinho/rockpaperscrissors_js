@@ -21,7 +21,7 @@ var picksSpock = document.getElementById("js-playerPick_spock");
 
 var computerButtons = document.getElementsByClassName("c-btns");
 var playerButtons = gamePicker.getElementsByTagName("button");
-	
+
 var previousIndex = 0;
 var interval;
 var choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
