@@ -35,14 +35,23 @@ var computer = {
 	score: 0
 };
 
+// Function disables or enables player's buttons
+function disableEnableButtons(val) {
+	for(var i = 0; i < playerButtons.length; i++) {
+		if (val == "enable")
+			playerButtons[i].disabled = false;
+		else
+			playerButtons[i].disabled = true;
+		
+	}
+}
 /*
 Basic function in app. Sets elements for the game (displays or hides depending on situation).
 Also enables player's buttons (disabled when player or computer gets 10 points)
 */
 function setGameElements() {
 	
-	for(var i = 0; i < playerButtons.length; i++)
-			playerButtons[i].disabled = false;
+	disableEnableButtons("enable");
 	
 	switch(gameStatus) {
 		case "started":
@@ -80,11 +89,16 @@ It does it every 0,1 second and stops after 2 seconds - last drawed index is com
 */
 function eventForClick() {
 	
-	interval = setInterval(function(){ 
+	
+	interval = setInterval(function(){
+		disableEnableButtons("disable");
 		computerButtons[previousIndex].style.display = "none";
 		previousIndex = Math.floor(Math.random()*5);
 		computerButtons[previousIndex].style.display = "block";	}, 100);
-	setTimeout(function () {clearInterval(interval);}, 2000);
+	setTimeout(function () {
+		clearInterval(interval);
+		disableEnableButtons("enable");
+	}, 2000);
 	
 }
 
@@ -131,8 +145,7 @@ function result(playerPick, computerPick) {
 	When end screen is displayed showResults() is called
 	*/
 	if(computer.score == 10 || player.score == 10) {
-		for(var i = 0; i < playerButtons.length; i++)
-			playerButtons[i].disabled = true;
+		disableEnableButtons("disable");
 		setTimeout(function () {
 			gameStatus = "ended";
 			setGameElements();
