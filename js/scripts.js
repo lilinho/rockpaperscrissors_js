@@ -42,7 +42,7 @@ Also enables player's buttons (disabled when player or computer gets 10 points)
 function setGameElements() {
 	
 	for(var i = 0; i < playerButtons.length; i++)
-			playerButtons[i].disabled = "false";
+			playerButtons[i].disabled = false;
 	
 	switch(gameStatus) {
 		case "started":
@@ -132,7 +132,7 @@ function result(playerPick, computerPick) {
 	*/
 	if(computer.score == 10 || player.score == 10) {
 		for(var i = 0; i < playerButtons.length; i++)
-			playerButtons[i].disabled = "true";
+			playerButtons[i].disabled = true;
 		setTimeout(function () {
 			gameStatus = "ended";
 			setGameElements();
